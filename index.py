@@ -85,7 +85,7 @@ def justape(id):
 @app.route("/reindeer/<id>")
 def reindeer(id):
   
-  url = f"https://testlaunchmynft.mypinata.cloud/ipfs/QmVejm66qwcoQnwSETJGNvc7FaByd5ZLR7tbbJCJhzcnCg/{id-1}.json"
+  url = f"https://testlaunchmynft.mypinata.cloud/ipfs/QmVejm66qwcoQnwSETJGNvc7FaByd5ZLR7tbbJCJhzcnCg/{int(id)-1}.json"
   
   js = req.get(url).json()
 
