@@ -119,6 +119,8 @@ def trippiest(id):
   js["description"] = "The Trippiest Ape Tribe Flip Trippin On The Polygon Blockchain."
 
   js["image"] = f"https://bafybeihlql46abes4k2myshgtd7v4yfyxg5v42bfcul7gu2vgkrxqwp3ay.ipfs.nftstorage.link/{id}.png"
+
+  js["name"] = f"Trippiest Ape Tribe #{id}"
   
   return jsonify(js)
 
