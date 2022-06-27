@@ -63,8 +63,6 @@ def hellopantha(id):
   
   js = req.get(url).json()
 
-  js["description"] = js["description"].replace('Solana','Polygon')
-
   js.pop('symbol')
   js.pop('seller_fee_basis_points')
   js.pop('external_url')
