@@ -46,9 +46,7 @@ def yeahtiger(id):
   url = f"https://bafybeia737e3bpzusnxxn36alotv2fwviezjm44e5rx4fnuvmpfgcfh3ha.ipfs.nftstorage.link/{id}.json"
   
   js = req.get(url).json()
-  
-  # js["name"] = f"Yeah Tigers NFT #{id}"
-  
+
   js["description"] = js["description"].replace('Solana','Polygon')
 
   js.pop('symbol')
