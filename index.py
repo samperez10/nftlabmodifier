@@ -1,9 +1,14 @@
 import requests as req,json
 
-from flask import Flask , jsonify ,request, send_file
+from flask import Flask , jsonify ,request, send_file , render_template
 
   
 app = Flask(__name__)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    
+    return "Wkwkwkw", 404
     
 @app.route("/notcakedapes/<id>")
 def cakedapes(id):
