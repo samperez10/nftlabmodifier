@@ -95,6 +95,20 @@ def reindeer(id):
   
   return jsonify(js)
 
+@app.route("/warlocks/<id>")
+def warlocks(id):
+  
+  url = f"https://testlaunchmynft.mypinata.cloud/ipfs/QmXz2XMvAwwL8aRuQqifrpW6FB6XHBXKYKJw57qEd7KxzD/{int(id)-1}.json"
+  
+  js = req.get(url).json()
+
+  js.pop('symbol')
+  js.pop('seller_fee_basis_points')
+  js.pop('properties')
+  js["description"] = js["description"].replace('solana','polygon')
+  
+  return jsonify(js)
+
 @app.route("/")
 def hello_world():
   
