@@ -116,7 +116,7 @@ def trippiest(id):
   
   js = req.get(url).json()
   
-  js["description"] = js["description"].replace('Better','Polygon')
+  js["description"] = "The Trippiest Ape Tribe Flip Trippin On The Polygon Blockchain."
 
   js["image"] = f"https://bafybeihlql46abes4k2myshgtd7v4yfyxg5v42bfcul7gu2vgkrxqwp3ay.ipfs.nftstorage.link/{id}.png"
   
