@@ -47,8 +47,8 @@ def yeahtiger(id):
   
   js = req.get(url).json()
   
-  js["name"] = f"Yeah Tigers NFT #{id}"
-
+  # js["name"] = f"Yeah Tigers NFT #{id}"
+  
   js["description"] = js["description"].replace('Solana','Polygon')
 
   js.pop('symbol')
