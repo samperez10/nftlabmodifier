@@ -131,7 +131,7 @@ def moonturtle(id):
   
   js = req.get(url).json()
   
-  js["description"] = "Moonturtlez Poly is a community driven collection of 8,888 randomly generated NFTs on the Polygon blockchain."
+  js["description"] = "Moonturtlez is a community driven collection of 8,888 randomly generated NFTs on the Polygon blockchain."
   
   return jsonify(js)
 
