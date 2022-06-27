@@ -40,6 +40,22 @@ def bokizombie(id):
   
   return jsonify(js)
 
+@app.route("/yeahtiger/<id>")
+def yeahtiger(id):
+  
+  url = f"https://bafybeia737e3bpzusnxxn36alotv2fwviezjm44e5rx4fnuvmpfgcfh3ha.ipfs.nftstorage.link/{id}.json"
+  
+  js = req.get(url).json()
+  
+  js["name"] = f"Yeah Tigers NFT #{id}"
+
+  js.pop('symbol')
+  js.pop('seller_fee_basis_points')
+  js.pop('external_url')
+  js.pop('properties')
+  
+  return jsonify(js)
+
 @app.route("/")
 def hello_world():
   
