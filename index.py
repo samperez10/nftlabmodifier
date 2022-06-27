@@ -28,6 +28,8 @@ def bokizombie(id):
   js = req.get(url).json()
   
   js["name"] = f"Flip Boki Zombie #{id}"
+
+  js["collection"] = "Flip Boki Zombie"
   
   js["image"] = f"https://nftstorage.link/ipfs/bafybeiecxmtho5k23ognvjclahx7kivaftbaf4ujogsw3euysdvzt54u3q/{id}.png"
   
