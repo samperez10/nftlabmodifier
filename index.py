@@ -82,6 +82,19 @@ def justape(id):
   
   return jsonify(js)
 
+@app.route("/reindeer/<id>")
+def reindeer(id):
+  
+  url = f"https://testlaunchmynft.mypinata.cloud/ipfs/QmVejm66qwcoQnwSETJGNvc7FaByd5ZLR7tbbJCJhzcnCg/{id-1}.json"
+  
+  js = req.get(url).json()
+
+  js.pop('symbol')
+  js.pop('seller_fee_basis_points')
+  js.pop('properties')
+  
+  return jsonify(js)
+
 @app.route("/")
 def hello_world():
   
