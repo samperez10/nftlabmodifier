@@ -23,5 +23,11 @@ def metadata(id):
   js["description"] = "Caked Apes Flip are 2222 unique and randomly generated NFTs living in Polygon Blockchain."
   
   return jsonify(js)
+
+@app.route("/")
+def metadata():
   
+  return 'Hello world'
+
+
   
