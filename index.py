@@ -57,7 +57,7 @@ def yeahtiger(id):
   return jsonify(js)
 
 @app.route("/hellopantha/<id>")
-def yeahtiger(id):
+def hellopantha(id):
   
   url = f"https://bafybeid7mz2iel2gr2g56dpkng2djx7fy2j5t4sbkpdzvc4gmgnli6k2mq.ipfs.nftstorage.link/{id}.json"
   
