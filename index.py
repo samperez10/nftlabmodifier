@@ -25,7 +25,7 @@ def metadata(id):
   return jsonify(js)
 
 @app.route("/")
-def metadata():
+def hello_world():
   
   return 'Hello world'
 
