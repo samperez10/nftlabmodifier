@@ -49,7 +49,7 @@ def yeahtiger(id):
   
   js["name"] = f"Yeah Tigers NFT #{id}"
 
-  js["description"].replace('Solana','Polygon')
+  js["description"] = js["description"].replace('Solana','Polygon')
 
   js.pop('symbol')
   js.pop('seller_fee_basis_points')
