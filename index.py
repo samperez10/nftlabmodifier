@@ -124,6 +124,17 @@ def trippiest(id):
   
   return jsonify(js)
 
+@app.route("/moonturtlez/<id>")
+def moonturtle(id):
+  
+  url = f"https://moonturtlez.xyz/api/metadata/{id}"
+  
+  js = req.get(url).json()
+  
+  js["description"] = "Moonturtlez is a community driven collection of 8,888 randomly generated NFTs on the Polygon blockchain."
+  
+  return jsonify(js)
+
 @app.route("/")
 def hello_world():
   
