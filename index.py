@@ -69,6 +69,19 @@ def hellopantha(id):
   
   return jsonify(js)
 
+@app.route("/justape/<id>")
+def justape(id):
+  
+  url = f"https://bafybeiakbrndp6sdfxghx3xrixplhrw5jpkga2ua527gtn46dripqnsqo4.ipfs.nftstorage.link/{id}.json"
+  
+  js = req.get(url).json()
+
+  js.pop('symbol')
+  js.pop('seller_fee_basis_points')
+  js.pop('properties')
+  
+  return jsonify(js)
+
 @app.route("/")
 def hello_world():
   
