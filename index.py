@@ -65,7 +65,6 @@ def hellopantha(id):
 
   js.pop('symbol')
   js.pop('seller_fee_basis_points')
-  js.pop('external_url')
   js.pop('properties')
   
   return jsonify(js)
