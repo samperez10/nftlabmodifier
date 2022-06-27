@@ -10,18 +10,18 @@ def page_not_found(e):
     
     return "Wkwkwkw", 404
     
-@app.route("/notcakedapes/<id>")
+@app.route("/flipcakedapes/<id>")
 def cakedapes(id):
   
   url = f"https://nervous.mypinata.cloud/ipfs/QmUL1dHBJpbSMi8qXgRNMqRYLJMP2FmMFTFp1vu3vbeBuN/{id}"
   
   js = req.get(url).json()
   
-  js["name"] = f"Caked Apes Flip #{id}"
+  js["name"] = f"Flip Caked Apes #{id}"
   
   js["image"] = f"https://nftstorage.link/ipfs/bafybeiexnomle7nzrdjgejs4gllgb6tl32nkixmhvofhagzzdx2pp6pr7a/{id}.png"
   
-  js["description"] = "Caked Apes Flip are 2222 unique and randomly generated NFTs living in Polygon Blockchain."
+  js["description"] = "Flip Caked Apes are 2222 unique and randomly generated NFTs living in Polygon Blockchain."
   
   return jsonify(js)
 
