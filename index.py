@@ -56,6 +56,22 @@ def yeahtiger(id):
   
   return jsonify(js)
 
+@app.route("/hellopantha/<id>")
+def yeahtiger(id):
+  
+  url = f"https://bafybeid7mz2iel2gr2g56dpkng2djx7fy2j5t4sbkpdzvc4gmgnli6k2mq.ipfs.nftstorage.link/{id}.json"
+  
+  js = req.get(url).json()
+
+  js["description"] = js["description"].replace('Solana','Polygon')
+
+  js.pop('symbol')
+  js.pop('seller_fee_basis_points')
+  js.pop('external_url')
+  js.pop('properties')
+  
+  return jsonify(js)
+
 @app.route("/")
 def hello_world():
   
