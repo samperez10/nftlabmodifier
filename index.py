@@ -5,8 +5,8 @@ from flask import Flask , jsonify ,request, send_file
   
 app = Flask(__name__)
     
-@app.route("/metadata/<id>")
-def metadata(id):
+@app.route("/notcakedapes/<id>")
+def cakedapes(id):
   
   url = f"https://nervous.mypinata.cloud/ipfs/QmUL1dHBJpbSMi8qXgRNMqRYLJMP2FmMFTFp1vu3vbeBuN/{id}"
   
