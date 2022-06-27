@@ -110,7 +110,7 @@ def warlocks(id):
   return jsonify(js)
 
 @app.route("/trippiest/<id>")
-def bokizombie(id):
+def trippiest(id):
   
   url = f"https://nervous.mypinata.cloud/ipfs/QmdrrF9RUBRitrwWV2apRZ9RVcrFQ7amcEBRSPrCG1RM2f/{id}"
   
