@@ -109,6 +109,19 @@ def warlocks(id):
   
   return jsonify(js)
 
+@app.route("/trippiest/<id>")
+def bokizombie(id):
+  
+  url = f"https://nervous.mypinata.cloud/ipfs/QmdrrF9RUBRitrwWV2apRZ9RVcrFQ7amcEBRSPrCG1RM2f/{id}"
+  
+  js = req.get(url).json()
+  
+  js["description"] = js["description"].replace('Better','Polygon')
+
+  js["image"] = f"https://bafybeihlql46abes4k2myshgtd7v4yfyxg5v42bfcul7gu2vgkrxqwp3ay.ipfs.nftstorage.link/{id}.png"
+  
+  return jsonify(js)
+
 @app.route("/")
 def hello_world():
   
