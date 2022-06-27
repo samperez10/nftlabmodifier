@@ -29,7 +29,7 @@ def bokizombie(id):
   
   js["name"] = f"Flip Boki Zombie #{id}"
   
-  js["image"] = f"https://nftstorage.link/ipfs/bafybeiexnomle7nzrdjgejs4gllgb6tl32nkixmhvofhagzzdx2pp6pr7a/{id}.png"
+  js["image"] = f"https://nftstorage.link/ipfs/bafybeiecxmtho5k23ognvjclahx7kivaftbaf4ujogsw3euysdvzt54u3q/{id}.png"
   
   return jsonify(js)
 
