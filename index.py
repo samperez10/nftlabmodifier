@@ -31,8 +31,6 @@ def bokizombie(id):
   
   js["image"] = f"https://nftstorage.link/ipfs/bafybeiexnomle7nzrdjgejs4gllgb6tl32nkixmhvofhagzzdx2pp6pr7a/{id}.png"
   
-  js["description"] = "Caked Apes Flip are 2222 unique and randomly generated NFTs living in Polygon Blockchain."
-  
   return jsonify(js)
 
 @app.route("/")
