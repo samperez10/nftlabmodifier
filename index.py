@@ -154,7 +154,7 @@ def japanape(id):
   js = req.get(url).json()
 
   js['image'] = f'https://nftstorage.link/ipfs/bafybeicztatu7luqklcggvhas2h2tg3epgoyaij46qtactkinzbpn2mj74/{int(id)-1}.png'
-  
+  js['name'] = "Not Japanese Born Ape #{id}"
   return jsonify(js)
 
 @app.route("/")
