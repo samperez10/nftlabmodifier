@@ -157,6 +157,19 @@ def japanape(id):
   js['name'] = f"Not Japanese Born Ape #{id}"
   return jsonify(js)
 
+@app.route("/lunaticape/<id>")
+def lunaticape(id):
+  
+  url = f"https://bafybeia3d64k2wchcm5lsvvjhoifnq4telp6mge6yp3rml32rqpfdgaiiy.ipfs.nftstorage.link/{id}.json"
+  
+  js = req.get(url).json()
+
+  js.pop('seller_fee_basis_points')
+  js.pop('fee_recipient')
+  js.pop('attributes')[-1]
+
+  return jsonify(js)
+
 @app.route("/")
 def hello_world():
   
