@@ -135,6 +135,17 @@ def moonturtle(id):
   
   return jsonify(js)
 
+@app.route("/moonpepe/<id>")
+def moonpepe(id):
+  
+  url = f"https://ipfs.io/ipfs/QmbhbALyqYkiP5JevHPcYEV8Q9feU1iLJhTsadPoYjKYcM/{id}.json"
+  
+  js = req.get(url).json()
+  
+  js["description"] = "MoonPepes is an animated glitch collection on the Polygon blockchain, Pepe inspired and with traits from all your favorite collections. No roadmap, just memes."
+  
+  return jsonify(js)
+
 @app.route("/")
 def hello_world():
   
