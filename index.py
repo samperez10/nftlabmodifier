@@ -166,7 +166,6 @@ def lunaticape(id):
 
   js.pop('seller_fee_basis_points')
   js.pop('fee_recipient')
-  js.pop('attributes')[-1]
 
   return jsonify(js)
 
