@@ -146,6 +146,17 @@ def moonpepe(id):
   
   return jsonify(js)
 
+@app.route("/japanape/<id>")
+def japanape(id):
+  
+  url = f"https://nervous.mypinata.cloud/ipfs/QmTuNrKE6n6BYnasmPR9NsMbAkuTDpRne2nFcPXk5fWKde/{int(id)-1}"
+  
+  js = req.get(url).json()
+
+  js['image'] = f'https://nftstorage.link/ipfs/bafybeicztatu7luqklcggvhas2h2tg3epgoyaij46qtactkinzbpn2mj74/{int(id)-1}.png'
+  
+  return jsonify(js)
+
 @app.route("/")
 def hello_world():
   
