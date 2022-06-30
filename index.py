@@ -169,6 +169,14 @@ def lunaticape(id):
 
   return jsonify(js)
 
+@app.route("/wzrds/<id>")
+def lunaticape(id):
+  
+  url = f"https://wzrds.xyz/metadata/{id}"
+  
+  js = req.get(url).json()
+
+
 @app.route("/")
 def hello_world():
   
