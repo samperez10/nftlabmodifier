@@ -170,7 +170,7 @@ def lunaticape(id):
   return jsonify(js)
 
 @app.route("/wzrds/<id>")
-def lunaticape(id):
+def wzrds(id):
   
   url = f"https://wzrds.xyz/metadata/{id}"
   
