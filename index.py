@@ -178,6 +178,20 @@ def wzrds(id):
 
   return jsonify(js)
 
+@app.route("/fcheebs/<id>")
+def wzrds(id):
+  
+  url = f"https://nervous.mypinata.cloud/ipfs/QmcnydfBmiaQxFB7CkUB8DHS2jX6WYEyqG3SjRnCdvGjJV/{id}.json"
+    
+  js = req.get(url).json()
+
+  js['image'] = f"https://bafybeih3mzql5kp6qwbgwbhvvf3ocwln2n4e7vposket4te7mlcmgkg36m.ipfs.nftstorage.link/{id}.png"
+  
+  js['name'] = f"Flip Cheebs #{id}"
+
+  js['description'] = "Flip Cheebs is a collection of 10,000 Friends looking to build a world we can vibe in.",
+
+  return jsonify(js)
 
 @app.route("/")
 def hello_world():
