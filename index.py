@@ -179,7 +179,7 @@ def wzrds(id):
   return jsonify(js)
 
 @app.route("/fcheebs/<id>")
-def wzrds(id):
+def fcheebs(id):
   
   url = f"https://nervous.mypinata.cloud/ipfs/QmcnydfBmiaQxFB7CkUB8DHS2jX6WYEyqG3SjRnCdvGjJV/{id}.json"
     
