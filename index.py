@@ -176,6 +176,8 @@ def wzrds(id):
   
   js = req.get(url).json()
 
+  return jsonify(js)
+
 
 @app.route("/")
 def hello_world():
