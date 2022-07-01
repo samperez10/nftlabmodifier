@@ -196,7 +196,7 @@ def fcheebs(id):
 @app.route("/bunnybats/<id>")
 def bunnybats(id):
   
-  url = f"https://nervous.mypinata.cloud/ipfs/bafybeihokjut6ytyzfohghnyza5dksh3ap4fw2ziyrjec27ckb24q3pqke/{id}"
+  url = f"https://nftstorage.link/ipfs/bafybeifjf3jpjqc2krfehhmkh2bf47jokmradluvonccjnvqnsxapofdke/{id}.json"
     
   js = req.get(url).json()
 
