@@ -189,7 +189,7 @@ def fcheebs(id):
   
   js['name'] = f"Flip Cheebs #{id}"
   js.pop('description')
-  js['description'] = "Flip Cheebs is a collection of 10,000 Friends looking to build a world we can vibe in.",
+  # js['description'] = "Flip Cheebs is a collection of 10,000 Friends looking to build a world we can vibe in.",
 
   return jsonify(js)
 
