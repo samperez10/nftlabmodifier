@@ -196,12 +196,11 @@ def fcheebs(id):
 @app.route("/bunnybats/<id>")
 def bunnybats(id):
   
-  url = f"https://nftscan.mypinata.cloud/ipfs/bafybeihokjut6ytyzfohghnyza5dksh3ap4fw2ziyrjec27ckb24q3pqke/{id}"
+  url = f"https://nervous.mypinata.cloud/ipfs/bafybeihokjut6ytyzfohghnyza5dksh3ap4fw2ziyrjec27ckb24q3pqke/{id}"
     
   js = req.get(url).json()
 
   return jsonify(js)
-
 
 
 @app.route("/")
