@@ -188,10 +188,8 @@ def fcheebs(id):
   js['image'] = f"https://bafybeih3mzql5kp6qwbgwbhvvf3ocwln2n4e7vposket4te7mlcmgkg36m.ipfs.nftstorage.link/{id}.png"
   
   js['name'] = f"Flip Cheebs #{id}"
-  js.pop('description')
   
-
-  js['description'] = "Flip Cheebs is a collection of 10,000 Friends looking to build a world we can vibe in.",
+  js['description'] = "Flip Cheebs is a collection of 10,000 Friends looking to build a world we can vibe in."
 
   return jsonify(js)
 
