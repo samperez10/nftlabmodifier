@@ -202,10 +202,21 @@ def bunnybats(id):
 
   return jsonify(js)
 
+
+
 @app.route("/mechaboki/<id>")
 def mechaboki(id):
   
   url = f"https://nervous.mypinata.cloud/ipfs/QmcKogBDzNpzQAF3VnaxWXBx6hJP2Cc7mieUD9Q4m1gWgg/{id}.json"
+    
+  js = req.get(url).json()
+
+  return jsonify(js)
+
+@app.route("/boki/<id>")
+def boki(id):
+  
+  url = f"https://boki.mypinata.cloud/ipfs/QmNTzpH5qLmUV8fDqaWKESFcV4CEKvUstAi7EtrAakF2Tx/{id}"
     
   js = req.get(url).json()
 
