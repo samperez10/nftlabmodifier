@@ -220,7 +220,7 @@ def boki(id):
     
   js = req.get(url).json()
 
-  return jsonify(indent=2, result=js)
+  return jsonify(js)
 
 
 
