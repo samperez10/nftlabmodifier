@@ -5,8 +5,6 @@ from flask import Flask , jsonify ,request, send_file , render_template
   
 app = Flask(__name__)
 
-app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
-
 @app.errorhandler(404)
 def page_not_found(e):
     
@@ -222,7 +220,7 @@ def boki(id):
     
   js = req.get(url).json()
 
-  return jsonify(js)
+  return jsonify(indent=2, result=js)
 
 
 
