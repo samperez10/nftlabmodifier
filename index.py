@@ -233,6 +233,18 @@ def mutantgoat(id):
 
   return jsonify(js)
 
+@app.route("/brokeape/<id>")
+def brokeape(id):
+  
+  url = f"https://bafybeid44c2fcedwxiwsypul2o3ne35h2zncbxhryvqnz6ggw2qbi2vd3u.ipfs.nftstorage.link/{id}.json"
+      
+  js = req.get(url).json()
+
+  js['name'] = f"Broke Ape #{id}"
+
+  return jsonify(js)
+
+
 
 @app.route("/")
 def hello_world():
