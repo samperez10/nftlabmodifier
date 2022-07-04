@@ -223,7 +223,7 @@ def boki(id):
   return jsonify(js)
 
 @app.route("/mutantgoat/<id>")
-def fastfood(id):
+def mutantgoat(id):
   
   url = f"https://bafybeiem2hc6stktvfsmikvcffimx6oe5siiotecad4rt46b53fl734oim.ipfs.nftstorage.link/{id}.json"
       
