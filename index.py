@@ -222,8 +222,14 @@ def boki(id):
 
   return jsonify(js)
 
+@app.route("/fastfood/<id>")
+def fastfood(id):
+  
+  url = f"https://bafybeih2ripn3td4cxtkpslhuz54dcxdvh7av7jnwbd72dh4b4e5uvmtry.ipfs.nftstorage.link/{id}.json"
+    
+  js = req.get(url).json()
 
-
+  return jsonify(js)
 
 
 @app.route("/")
