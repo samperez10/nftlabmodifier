@@ -222,12 +222,14 @@ def boki(id):
 
   return jsonify(js)
 
-@app.route("/fastfood/<id>")
+@app.route("/mutantgoat/<id>")
 def fastfood(id):
   
-  url = f"https://bafybeih2ripn3td4cxtkpslhuz54dcxdvh7av7jnwbd72dh4b4e5uvmtry.ipfs.nftstorage.link/{id}.json"
-    
+  url = f"https://bafybeiem2hc6stktvfsmikvcffimx6oe5siiotecad4rt46b53fl734oim.ipfs.nftstorage.link/{id}.json"
+      
   js = req.get(url).json()
+
+  js['name'] = f"Mutant Goat #{id}"
 
   return jsonify(js)
 
