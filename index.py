@@ -259,6 +259,14 @@ def flipbros(id):
 
   return jsonify(js)
 
+@app.route("/flippluto/<id>")
+def flippluto(id):
+  
+  url = f"https://bafybeif6o7frey32hivrcact22cazwshls76uklzvzprvbo2u3pkgxpdbe.ipfs.nftstorage.link/{id}.json"
+      
+  js = req.get(url).json()
+
+  return jsonify(js)
 
 
 @app.route("/")
