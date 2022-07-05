@@ -244,6 +244,21 @@ def brokeape(id):
 
   return jsonify(js)
 
+@app.route("/flipbros/<id>")
+def flipbros(id):
+  
+  url = f"https://nervous.mypinata.cloud/ipfs/QmTGB7nUqK6i7gMcULaJHbwDjZyqohgZ2TujRwBMusbw3T/{id}.json"
+      
+  js = req.get(url).json()
+
+  js['name'] = f"Flip Small Bro #{id}"
+
+  js['image'] = f"https://bafybeifimvcfjmny5f4scnnp4hhbx7gxa7eddml3pmlnphrsahbs6mvrzy.ipfs.nftstorage.link/{id}.png"
+
+  js['description'] = "8888 Flip Small Bros that are here to remind you you're never alone in this journey !"
+
+  return jsonify(js)
+
 
 
 @app.route("/")
