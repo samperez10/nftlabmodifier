@@ -275,6 +275,10 @@ def friendlyfox(id):
       
   js = req.get(url).json()
 
+  js.pop('properties')
+  js.pop('collection')
+  js.pop('seller_fee_basis_points')
+
   return jsonify(js)
 
 
