@@ -280,10 +280,19 @@ def friendlyfox(id):
   js.pop('seller_fee_basis_points')
 
   js['description'] = f"FF #{id} - Friendly Fox are a very special collection of Foxes floating on the Polygon Blockchain."
-  
+
   js['name'] = f"FF #{id}"
 
   del js['attributes'][-1]
+
+  return jsonify(js)
+
+@app.route("/phoneticape/<id>")
+def phoneticape(id):
+  
+  url = f"https://bafybeid2gy2uygah27j7ad6vt7tpekolkj2mhlfqpzkquigqo6kcuu2fby.ipfs.nftstorage.link/{id}.json"
+      
+  js = req.get(url).json()
 
   return jsonify(js)
 
