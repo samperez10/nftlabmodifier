@@ -279,6 +279,8 @@ def friendlyfox(id):
   js.pop('collection')
   js.pop('seller_fee_basis_points')
 
+  del js['attributes'][-1]
+
   return jsonify(js)
 
 
