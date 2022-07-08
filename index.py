@@ -279,6 +279,10 @@ def friendlyfox(id):
   js.pop('collection')
   js.pop('seller_fee_basis_points')
 
+  js['description'] = f"FF #{id} - Friendly Fox are a very special collection of Foxes floating on the Polygon Blockchain."
+  
+  js['name'] = f"FF #{id}"
+
   del js['attributes'][-1]
 
   return jsonify(js)
