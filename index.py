@@ -268,6 +268,18 @@ def flippluto(id):
 
   return jsonify(js)
 
+@app.route("/friendlyfox/<id>")
+def friendlyfox(id):
+  
+  url = f"https://bafybeiaoan7ganz52aqidn5llmxyrji7woff4lwewhmtorzvhw6uepsbx4.ipfs.nftstorage.link/{int(id)-1}.json"
+      
+  js = req.get(url).json()
+
+  return jsonify(js)
+
+
+  # https://testlaunchmynft.mypinata.cloud/ipfs/QmU4ED8jgnZt4CBKZm3GjMr7uy4qjFCoPufLMjB3URAGy2/3332.json
+
 
 @app.route("/")
 def hello_world():
