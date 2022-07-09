@@ -296,6 +296,15 @@ def phoneticape(id):
 
   return jsonify(js)
 
+@app.route("/boringape/<id>")
+def phoneticape(id):
+  
+  url = f"https://bafybeieffs6surngofjzmwv4mslzq27jgrnvhttzcvbxcvf6rnqylv7iiy.ipfs.nftstorage.link/{id}.json"
+      
+  js = req.get(url).json()
+
+  return jsonify(js)
+
 
   # https://testlaunchmynft.mypinata.cloud/ipfs/QmU4ED8jgnZt4CBKZm3GjMr7uy4qjFCoPufLMjB3URAGy2/3332.json
 
