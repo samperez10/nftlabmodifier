@@ -297,7 +297,7 @@ def phoneticape(id):
   return jsonify(js)
 
 @app.route("/boringape/<id>")
-def phoneticape(id):
+def boringape(id):
   
   url = f"https://bafybeieffs6surngofjzmwv4mslzq27jgrnvhttzcvbxcvf6rnqylv7iiy.ipfs.nftstorage.link/{id}.json"
       
