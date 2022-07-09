@@ -303,6 +303,8 @@ def boringape(id):
       
   js = req.get(url).json()
 
+  js['description'] = "BAYC isn't BAYC. We're a collection of 10,000 Boring Ape NFTs unique digital collectibles living on the Polygon Blockchain. Your Boring Ape doubles as your Yacht Club membership card, and grants access to no benefits."
+
   return jsonify(js)
 
 
