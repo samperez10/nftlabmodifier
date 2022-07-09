@@ -307,6 +307,23 @@ def boringape(id):
 
   return jsonify(js)
 
+@app.route("/wonderpals/<id>")
+def wonderpals(id):
+  
+  url = f"https://wonderpals.mypinata.cloud/ipfs/QmSvKdz3ecY3tKT4k7bcMnwPHXRby7tSLfPCngtb1Eq9PQ/{id}"
+    
+  js = req.get(url).json()
+
+  js['image'] = f"https://bafybeighcvajvi6wneptha4v27zotmkfsr6zfx7wjtgqgnoepq2uswdtui.ipfs.nftstorage.link/{id}.png"
+
+  js['name'] = f"Flip WonderPal #{id}"
+
+  js['description'] =  "Flip WonderPals is a collection of 10,000 delightfully cute pals. Our vision is to bring more joy to the world through community, creativity, and fun art!"
+
+  return jsonify(js)
+
+
+
 
   # https://testlaunchmynft.mypinata.cloud/ipfs/QmU4ED8jgnZt4CBKZm3GjMr7uy4qjFCoPufLMjB3URAGy2/3332.json
 
