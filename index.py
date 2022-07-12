@@ -322,6 +322,14 @@ def wonderpals(id):
 
   return jsonify(js)
 
+@app.route("/downsies/<id>")
+def downsies(id):
+  
+  url = f"https://nervous.mypinata.cloud/ipfs/QmQp829X55sqBhtSKfkLjwabo7KAua14H2a9sbZJVA5rhF/{id}.json"
+    
+  js = req.get(url).json()
+
+  return jsonify(js)
 
 
 
