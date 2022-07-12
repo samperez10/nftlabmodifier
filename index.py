@@ -331,6 +331,17 @@ def downsies(id):
 
   return jsonify(js)
 
+@app.route("/tfox/<id>")
+def tfox(id):
+  
+  url = f"https://bafybeibmc7di3wl62zm5scgdvvpr6rpp37u2s2rhd2jrsxfi6qy6ya5whq.ipfs.nftstorage.link/{int(id)-1}.json"
+    
+  js = req.get(url).json()
+
+  js['name'] = f"Fox #{id+1}"
+
+  return jsonify(js)
+
 
 
   # https://testlaunchmynft.mypinata.cloud/ipfs/QmU4ED8jgnZt4CBKZm3GjMr7uy4qjFCoPufLMjB3URAGy2/3332.json
