@@ -338,7 +338,7 @@ def tfox(id):
     
   js = req.get(url).json()
 
-  # js['name'] = f"Fox #{int(id)+1}"
+  js['name'] = f"Fox #{id}"
 
   return jsonify(js)
 
