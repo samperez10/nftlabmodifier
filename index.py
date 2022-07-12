@@ -334,11 +334,9 @@ def downsies(id):
 @app.route("/tfox/<id>")
 def tfox(id):
   
-  url = f"https://bafybeibmc7di3wl62zm5scgdvvpr6rpp37u2s2rhd2jrsxfi6qy6ya5whq.ipfs.nftstorage.link/{int(id)-1}.json"
+  url = f"https://bafybeifhqy2emt6c6ogml7jph4uxahsxahfy4kkmkrnznwfrqvvd5rsvhi.ipfs.nftstorage.link/{id}.json"
     
   js = req.get(url).json()
-
-  js['name'] = f"Fox #{id}"
 
   return jsonify(js)
 
