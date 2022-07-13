@@ -294,6 +294,8 @@ def phoneticape(id):
       
   js = req.get(url).json()
 
+  js['image'] = f'https://bafybeifv7z4rizf32lzgw6rmmwlzemm5xyabhfxxuuyljqyt3uzbhnrczy.ipfs.nftstorage.link/{id}.png'
+
   return jsonify(js)
 
 @app.route("/boringape/<id>")
