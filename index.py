@@ -340,6 +340,14 @@ def tfox(id):
 
   return jsonify(js)
 
+@app.route("/mapes/<id>")
+def mapes(id):
+  
+  url = f"https://nervous.mypinata.cloud/ipfs/QmXZHZu5B2okTyQgDyoHUQUu7uFTCRGXX3V51XkAw7Zdos/{id}.json"
+    
+  js = req.get(url).json()
+
+  return jsonify(js)
 
 
   # https://testlaunchmynft.mypinata.cloud/ipfs/QmU4ED8jgnZt4CBKZm3GjMr7uy4qjFCoPufLMjB3URAGy2/3332.json
